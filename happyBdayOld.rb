@@ -1,3 +1,4 @@
+# test change
 require 'highline/import'
 answers = Array.new
 #special_answer = ""
