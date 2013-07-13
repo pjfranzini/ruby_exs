@@ -1,13 +1,13 @@
 require_relative './calculator'
 require 'minitest/autorun'
-require 'minitest/pride'
+require 'minitest/pride' # pride adds rainbow colors
 
 class CalculatorTest < MiniTest::Unit::TestCase
-  def setup
+  def setup #run at the beginning of every test
     @calculator = Calculator.new
   end
 
-  def test_add_1
+  def test_add_1 #any method starting with test is a test
     assert_equal 2, @calculator.ask('What is 1 plus 1?')
   end
 
