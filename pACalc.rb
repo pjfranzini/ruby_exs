@@ -1,6 +1,5 @@
 class Calculator
   def strip_irrelevant_words(phrase)
-    phrase
     words = phrase.split[2..-1]
     words[words.length-1].gsub!("?","")
     words.map! do |word|
