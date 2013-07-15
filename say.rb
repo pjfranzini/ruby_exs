@@ -5,6 +5,7 @@ class Say
   	NUMTYS = ['twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety']
     # generating 16, 17, 18, 19, 60, 70, 80, 90 with code is what I did originally,
     # but this means many more lines of code to save defining a few more constants
+    # test
   def initialize(number)
     @num = number
   end
