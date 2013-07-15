@@ -2,7 +2,9 @@ class Say
 	NUMARRAY = ['zero','one','two','three','four','five','six','seven','eight',
   		'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen',
   	    'sixteen','seventeen','eighteen','nineteen'] 
-  	NUMTYS = ['twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety']
+  NUMTYS = ['twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety']
+  LOWERBOUND = 0
+  UPPERBOUND = 99
     # generating 16, 17, 18, 19, 60, 70, 80, 90 with code is what I did originally,
     # but this means many more lines of code to save defining a few more constants
     # test
@@ -11,8 +13,8 @@ class Say
   end
 
   def in_english
-  	if (@num<0 || @num>99)
-  		raise ArgumentError,"Number must be between 0 and 99, inclusive."
+  	if (@num<LOWERBOUND || @num>UPPERBOUND)
+  		raise ArgumentError,"Number must be between #{LOWERBOUND} and #{UPPERBOUND}, inclusive."
   	elsif (@num>=0 && @num<=19)
   		NUMARRAY[@num]
   	else
@@ -23,3 +25,6 @@ class Say
   	end
   end
 end
+# uncomment these lines to do talking functionality in shell
+# number = gets.to_i
+# puts Say.new(number).in_english

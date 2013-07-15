@@ -6,7 +6,16 @@ class SayTest < MiniTest::Unit::TestCase
   # def setup #run at the beginning of every test
 
   # end
-
+# additional tests from Mike P
+  def test_initialize_accepts_a_mumber
+    #he used assert_not_nil but it doesnt work for me (my ruby is newer)
+    refute_nil Say.new(22) 
+  end
+  def test_say_has_a_in_english_method
+    # could use assert_respond_to ?
+    refute_nil Say.new(22).in_english
+  end
+# end additional tests from Mike P
   def test_lower_bound
   #  assert_equal "Number must be between 0 and 99, inclusive. (ArgumentError)",  Say.new(-1).in_english
      assert_raises ArgumentError do
