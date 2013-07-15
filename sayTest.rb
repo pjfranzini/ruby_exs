@@ -7,11 +7,17 @@ class SayTest < MiniTest::Unit::TestCase
 
   # end
 
-  def test_exception_minus_one
-    assert_equal "Number must be between 0 and 99, inclusive. (ArgumentError)",  Say.new(-1).in_english
+  def test_lower_bound
+  #  assert_equal "Number must be between 0 and 99, inclusive. (ArgumentError)",  Say.new(-1).in_english
+     assert_raises ArgumentError do
+       Say.new(-1).in_english
+     end
   end
-  def test_exception_hundred
-    assert_equal "Number must be between 0 and 99, inclusive. (ArgumentError)",  Say.new(100).in_english
+  def test_upper_bound
+  #  assert_equal "Number must be between 0 and 99, inclusive. (ArgumentError)",  Say.new(100).in_english
+     assert_raises ArgumentError do
+       Say.new(100).in_english
+     end  
   end
   def test_zero
     assert_equal "zero",  Say.new(0).in_english

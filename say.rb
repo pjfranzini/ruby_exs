@@ -11,7 +11,7 @@ class Say
 
   def in_english
   	if (@num<0 || @num>99)
-  		"Number must be between 0 and 99, inclusive. (ArgumentError)"
+  		raise ArgumentError,"Number must be between 0 and 99, inclusive."
   	elsif (@num>=0 && @num<=19)
   		NUMARRAY[@num]
   	else
