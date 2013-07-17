@@ -1,4 +1,4 @@
-require_relative './chunkyNum'
+require_relative './sayMag'
 require 'minitest/autorun'
 require 'minitest/pride' # pride adds rainbow colors
 
@@ -15,11 +15,11 @@ class ChunkyTest < MiniTest::Unit::TestCase
   end
 
   def test_chunky_output_1
-  	assert_equal Chunks.new(1000).split, [0,0,1,0]
+  	assert_equal Chunks.new(1000).split, '1 thousand'
   end
 
   def test_chunky_output_2
-  	assert_equal Chunks.new(1234567890).split, [1, 234, 567, 890]
+  	assert_equal Chunks.new(1234567890).split, '1 billion 234 million 567 thousand 890'
   end
 
   def test_outta_range

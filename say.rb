@@ -26,5 +26,5 @@ class Say
   end
 end
 # uncomment these lines to do talking functionality in shell
-# number = gets.to_i
-# puts Say.new(number).in_english
+ number = gets.to_i
+ puts Say.new(number).in_english
