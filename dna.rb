@@ -5,9 +5,8 @@ class DNA
     end
     def dna_check(dna_string, error_msg)
         if dna_string.gsub(ALLOWED_LETTERS,'') != ''
-            raise ArgumentError, "error_msg"
+            raise ArgumentError, error_msg
         end
-
     end
     def error_check(nucleotide)
 	  	dna_check(@seq,"Invalid sequence")
@@ -32,6 +31,7 @@ class DNA
         dna_count.each do |key, value|
            dna_count.delete key if value == 0
         end
+        # could also use hash.reject method
         dna_count
     end
 
