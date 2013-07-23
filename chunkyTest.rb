@@ -18,15 +18,5 @@ class ChunkyTest < MiniTest::Unit::TestCase
   	assert_equal Chunks.new(1000).split, [0,0,1,0]
   end
 
-  def test_chunky_output_2
-  	assert_equal Chunks.new(1234567890).split, [1, 234, 567, 890]
-  end
 
-  def test_outta_range
-    assert_equal Chunks.new(2423421234567890).split, "Number out of range"
-  end
-
-  def test_outta_range
-    assert_equal Chunks.new(-43).split, "Number out of range"
-  end
 end
